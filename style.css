@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --veryDarkBlue: hsl(238, 29%, 16%);
+  --softRed: hsl(14, 88%, 65%);
+  --softViolet: hsl(273, 75%, 66%);
+  --softBlue: hsl(240, 73%, 65%);
+  --veryDarkGrayishBlue: hsl(237, 12%, 33%);
+  --darkDrayishBlue: hsl(240, 6%, 50%);
+  --lightGrayishBlue: hsl(240, 5%, 91%);
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(var(--softViolet), var(--softBlue));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.desktop-img-1 {
+  display: none;
+}
+
+.desktop-images {
+  display: none;
+}
+
+.faq-section {
+  width: 300px;
+  margin: 0 auto;
+  padding: 100px 10px 20px 20px;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 80px;
+}
+
+.mobile-images .img-1 {
+  position: absolute;
+  top: -110px;
+  left: 25px;
+}
+
+.mobile-images .img-2 {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.question-answer {
+  width: 100%;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.question:hover {
+  color: var(--softRed);
+  cursor: pointer;
+}
+
+.question > img {
+  margin-right: 10px;
+  transition: transform 300ms ease-in-out;
+}
+.answer {
+  display: none;
+}
+.show {
+  display: block;
+  transform: translateY(10px);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 20px 0;
+}
+.attribution a {
+  color: hsl(0, 0%, 90%);
+}
+
+@media screen and (min-width: 710px) {
+  .mobile-images {
+    display: none;
+  }
+  .desktop-images {
+    display: block;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-1 {
+    display: block;
+    position: absolute;
+    width: 150px;
+    top: 130px;
+    left: -70px;
+    z-index: 10;
+  }
+  .img-2 {
+    width: 330px;
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    z-index: 9;
+    overflow: hidden;
+  }
+  .img-3 {
+    width: 330px;
+    position: absolute;
+    top: -20px;
+    left: -60px;
+  }
+  .faq-section {
+    position: relative;
+    width: 80%;
+    min-height: 60vh;
+
+    display: flex;
+    max-width: 900px;
+    padding: 30px 30px 0px 0px;
+  }
+  .question-answer {
+    width: 50%;
+  }
+}
