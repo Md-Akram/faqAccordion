@@ -82,7 +82,7 @@ h1 {
 }
 .show {
   display: block;
-  transform: translateY(10px);
+  
 }
 
 .attribution {
